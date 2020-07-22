@@ -45,7 +45,7 @@ public enum Card implements Payable {
 
     @Override
     public BigDecimal getWorth() {
-        return BigDecimal.valueOf(0.0);
+        return BigDecimal.valueOf(balance);
     }
 
     @Override

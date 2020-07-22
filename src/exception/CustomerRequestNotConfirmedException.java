@@ -8,9 +8,7 @@ public class CustomerRequestNotConfirmedException extends RuntimeException {
     }
 
     @Override
-    public String toString() {
-        return "exception.CustomerRequestNotConfirmedException{" +
-                "message='" + message + '\'' +
-                '}';
+    public String getMessage() {
+        return this.message;
     }
 }

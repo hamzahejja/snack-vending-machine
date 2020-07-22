@@ -8,8 +8,6 @@ import exception.InsufficientChangeException;
 import exception.ItemNotFullyPaidException;
 import exception.SnackSoldOutException;
 import utils.Pair;
-import core.Payable;
-import core.VendingMachine;
 import java.math.BigDecimal;
 import java.util.Map;
 
@@ -233,6 +231,8 @@ public class SnackVendingMachine implements VendingMachine<SnackItem, SnackSlot>
         try {
             SnackItem dispensedSnackItem = this.dispenseSelectedSnackItem();
             Map<Payable, Integer> customerChange = this.calculateAndDispenseChange();
+            this.printCalculatedCustomerChange(customerChange);
+
             return new Pair<>(dispensedSnackItem, customerChange);
         } catch (InsufficientChangeException insufficientChangeException) {
             return new Pair<>(null, this.refund());

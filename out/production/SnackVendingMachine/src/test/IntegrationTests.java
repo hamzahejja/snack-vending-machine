@@ -72,7 +72,7 @@ public class IntegrationTests {
     }
 
     @Test
-    public void Should_RefundAccumulatedMoneyAsChange_When_CatchingInsufficientChangeException() {
+    public void Should_RefundAccumulatedMoneyAsChange_When_CustomerChangeIsNonProducible() {
         // RESET TO ISOLATE TESTS
         snackVendingMachine.getChangeInventory().clear();
         snackVendingMachine.setAccumulatedMoney(BigDecimal.valueOf(0));

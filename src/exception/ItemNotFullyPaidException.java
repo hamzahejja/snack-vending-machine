@@ -8,7 +8,7 @@ public class ItemNotFullyPaidException extends RuntimeException {
     }
 
     @Override
-    public String toString() {
+    public String getMessage() {
         return "exception.ItemNotFullyPaidException{" +
                 "message='" + message + '\'' +
                 '}';

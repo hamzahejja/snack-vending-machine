@@ -9,7 +9,6 @@ public class InvalidEntryException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "exception.InvalidEntryException\n" +
-                "{MESSAGE = " + this.message + " }";
+        return this.message;
     }
 }

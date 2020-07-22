@@ -231,6 +231,8 @@ public class SnackVendingMachine implements VendingMachine<SnackItem, SnackSlot>
         try {
             SnackItem dispensedSnackItem = this.dispenseSelectedSnackItem();
             Map<Payable, Integer> customerChange = this.calculateAndDispenseChange();
+            this.printCalculatedCustomerChange(customerChange);
+
             return new Pair<>(dispensedSnackItem, customerChange);
         } catch (InsufficientChangeException insufficientChangeException) {
             return new Pair<>(null, this.refund());

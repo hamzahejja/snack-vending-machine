@@ -8,9 +8,7 @@ public class SnackSoldOutException extends RuntimeException {
     }
 
     @Override
-    public String toString() {
-        return "exception.SnackSoldOutException{" +
-                "message='" + message + '\'' +
-                '}';
+    public String getMessage() {
+        return this.message;
     }
 }

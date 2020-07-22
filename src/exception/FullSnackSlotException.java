@@ -9,7 +9,6 @@ public class FullSnackSlotException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "exception.FullSnackSlotException\n" +
-                "{MESSAGE = " + this.message + "}";
+        return this.message;
     }
 }
