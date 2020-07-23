@@ -4,16 +4,12 @@ import core.Payable;
 
 import java.math.BigDecimal;
 
-public enum Card implements Payable {
-    VISA_CARD("4002123456780000", "VISA_CARD", 1000),
-    MASTERCARD("5412751234123456", "MASTERCARD", 1000),
-    EMPTY_BALANCE_CARD("4002123456780000", "VISA_CARD", 0);
-
+public class Card implements Payable {
     private String number;
     private String type;
     private double balance;
 
-    private Card(String number, String type, double balance) {
+    public Card(String number, String type, double balance) {
         this.number = number;
         this.type = type;
         this.balance = balance;

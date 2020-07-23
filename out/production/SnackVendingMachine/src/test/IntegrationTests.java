@@ -67,7 +67,7 @@ public class IntegrationTests {
         snackVendingMachine.getKeypad().pressButton(Button.CONFIRM);
         snackVendingMachine.processRequestAndReturnSelectedSnackItem(snackVendingMachine.getSnackSlots()[rowIndex][colIndex]);
 
-        snackVendingMachine.insertMoney(snackVendingMachine.getCardSlot(), Card.EMPTY_BALANCE_CARD);
+        snackVendingMachine.insertMoney(snackVendingMachine.getCardSlot(), new Card("4002123456789900", "VISA", 1));
         snackVendingMachine.dispenseSelectedItemAndCustomerChange();
     }
 

@@ -9,8 +9,6 @@ public class InsufficientChangeException extends RuntimeException {
 
     @Override
     public String toString() {
-        return "exception.InsufficientChangeException{" +
-                "message='" + message + '\'' +
-                '}';
+        return this.message;
     }
 }

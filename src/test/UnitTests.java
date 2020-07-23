@@ -62,7 +62,8 @@ public class UnitTests {
          * trying to insert card(s) into the Snack
          * Vending Machine's Note Slot.
          */
-        snackVendingMachine.insertMoney(snackVendingMachine.getNoteSlot(), Card.VISA_CARD);
+        Card visa = new Card("4002123456789999", "VISA_CARD", 100);
+        snackVendingMachine.insertMoney(snackVendingMachine.getNoteSlot(), visa);
     }
 
     @Test(expected = CustomerRequestNotConfirmedException.class)

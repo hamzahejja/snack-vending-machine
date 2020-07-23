@@ -11,8 +11,10 @@ public class UnsupportedPayableTypeException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "exception.UnsupportedPayableTypeException\n" +
-                "{PAYABLE = " + this.payable +
-                "MESSAGE = " + this.message + " }";
+        return this.message;
+    }
+
+    public String getPayable() {
+        return this.payable;
     }
 }

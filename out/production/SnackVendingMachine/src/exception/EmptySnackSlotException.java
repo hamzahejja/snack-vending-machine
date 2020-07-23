@@ -9,7 +9,6 @@ public class EmptySnackSlotException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "exception.EmptySnackSlotException\n" +
-                "{MESSAGE = " + this.message + "}";
+        return this.message;
     }
 }
